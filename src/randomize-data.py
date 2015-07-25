@@ -51,8 +51,9 @@ if __name__ == "__main__":
 
     for i in range(0, 1000):
         val = random.randint(10, 40)
-        values = (1, datetime.now(), float(val), 1)
+        type_data = random.randint(1, 2)
+        values = (1, datetime.now(), float(val), type_data)
         print "Inserting : {0}:".format(values)
         conn.insert_data(conn.meas_insert, values)
-        time.sleep(1)
+        time.sleep(0.3)
 
